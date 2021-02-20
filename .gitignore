@@ -38,5 +38,11 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Generated
+docs/deps
+
 # Docker
 tools/docker/data
+
+# Environment Variables
+.env
