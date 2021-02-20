@@ -1,0 +1,5 @@
+{
+  "ignoreFiles": ["dist", "node_modules"],
+  "extends": ["stylelint-config-recommended"],
+  "rules": {}
+}

@@ -1,0 +1,12 @@
+{
+  "package.json": "yarn lint-staged:package-json",
+  "*.js": ["yarn lint-staged:prettier", "yarn lint-staged:lint"],
+  "**/*.{graphql,json,md,yml}": ["yarn lint-staged:prettier"],
+  "**/*.{ts,tsx}": [
+    "yarn lint-staged:imports",
+    "yarn lint-staged:prettier",
+    "yarn lint-staged:lint",
+    "yarn lint-staged:test"
+  ],
+  "**/*.{css,scss}": ["yarn lint-staged:prettier", "yarn lint-staged:stylelint"]
+}

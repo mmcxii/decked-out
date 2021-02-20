@@ -1,9 +1,22 @@
 {
   "name": "decked-out",
   "version": "0.0.0",
+  "private": true,
   "license": "MIT",
   "scripts": {
-    "nx:nx": "nx",
+    "husky:commit-msg": "commitlint --config ./.commitlintrc.json --edit",
+    "husky:post-merge": "yarn install",
+    "husky:pre-commit": "yarn lint-staged",
+    "husky:pre-push": "npx branch-name-lint ./.branchnamelintrc.json && yarn nx:affected:lint && yarn nx:affected:test --codeCoverage && yarn nx:affected:build && yarn nx:dep-graph:file",
+    "postinstall": "husky install",
+    "lint-staged": "lint-staged --concurrent false --config ./.lint-stagedrc.json",
+    "lint-staged:imports": "import-sort --write",
+    "lint-staged:lint": "eslint --fix",
+    "lint-staged:package-json": "sort-package-json",
+    "lint-staged:prettier": "yarn prettier --write",
+    "lint-staged:stylelint": "stylelint --config ./.stylelintrc.json",
+    "lint-staged:test": "jest --findRelatedTests",
+    "nx": "nx",
     "nx:start": "nx serve",
     "nx:build": "nx build",
     "nx:test": "nx test",
@@ -25,12 +38,13 @@
     "nx:dep-graph": "nx dep-graph",
     "nx:help": "nx help"
   },
-  "private": true,
   "dependencies": {
     "@ionic/react": "^5.5.2",
     "ionicons": "^5.2.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@nrwl/cli": "11.3.0",
     "@nrwl/nest": "^11.3.0",
     "@nrwl/nx-cloud": "latest",
@@ -41,7 +55,13 @@
     "@nxtend/ionic-react": "^11.0.1",
     "@types/node": "12.12.38",
     "dotenv": "6.2.0",
+    "husky": "^5.0.9",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-parser-typescript": "^6.0.0",
+    "import-sort-style-renke": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
+    "sort-package-json": "^1.49.0",
     "ts-node": "~9.1.1",
     "typescript": "~4.0.3"
   }
