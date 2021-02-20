@@ -1,9 +1,9 @@
 import { AuthGuard } from "@nestjs/passport";
-import { ContextType } from "@barnpros/common/shared/types";
+import { ContextType } from "@decked-out/api/types";
 import { ExecutionContext } from "@nestjs/common";
 import { GqlExecutionContext } from "@nestjs/graphql";
 import { Request } from "express";
-import { User } from "@barnpros/core/database/entities";
+import { User } from "@decked-out/api/orm";
 
 /**
  * Replaces the default `AuthGuard` from `@nestjs/passport` to
