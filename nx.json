@@ -1,20 +1,15 @@
 {
-  "npmScope": "decked-out",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     ".eslintrc.json": "*",
     ".prettierrc.json": "*",
     ".stylelintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "decked-out",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -26,5 +21,14 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "api": { "tags": [] },
+    "app": { "tags": [] },
+    "app-e2e": { "tags": [], "implicitDependencies": ["app"] },
+    "app-components": { "tags": [] },
+    "app-containers": { "tags": [] },
+    "app-pages": { "tags": [] },
+    "app-graphql": { "tags": [] },
+    "api-orm": { "tags": [] }
+  }
 }

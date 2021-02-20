@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@decked-out/app/components": ["libs/app/components/src/index.ts"],
+      "@decked-out/app/containers": ["libs/app/containers/src/index.ts"],
+      "@decked-out/app/pages": ["libs/app/pages/src/index.ts"],
+      "@decked-out/app/graphql": ["libs/app/graphql/src/index.ts"],
+      "@decked-out/api/orm": ["libs/api/orm/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
