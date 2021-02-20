@@ -1,1 +1,4 @@
-export * from "./lib/api-orm.module";
+export * from "./lib/entities";
+export * from "./lib/services";
+
+export * from "./lib/orm.module";

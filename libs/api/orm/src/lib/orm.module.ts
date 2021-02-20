@@ -12,4 +12,4 @@ import { ALL_ENTITIES } from "./constants/allEntities";
   ],
   exports: [MikroOrmModule],
 })
-export class ApiOrmModule {}
+export class OrmModule {}

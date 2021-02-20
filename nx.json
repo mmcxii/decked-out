@@ -29,6 +29,11 @@
     "app-containers": { "tags": [] },
     "app-pages": { "tags": [] },
     "app-graphql": { "tags": [] },
-    "api-orm": { "tags": [] }
+    "api-orm": { "tags": [] },
+    "api-auth": { "tags": [] },
+    "api-user": { "tags": [] },
+    "api-config": { "tags": [] },
+    "api-types": { "tags": [] },
+    "api-testing": { "tags": [] }
   }
 }

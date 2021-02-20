@@ -8,6 +8,11 @@ import { BaseEntity } from "./_base.entity";
   tableName: "user",
 })
 export class User extends BaseEntity {
+  @Property({
+    default: 1,
+  })
+  public credentialVersion: number;
+
   @Field(() => String)
   @Property({
     unique: true,
