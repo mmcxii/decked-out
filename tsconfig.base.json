@@ -19,7 +19,12 @@
       "@decked-out/app/containers": ["libs/app/containers/src/index.ts"],
       "@decked-out/app/pages": ["libs/app/pages/src/index.ts"],
       "@decked-out/app/graphql": ["libs/app/graphql/src/index.ts"],
-      "@decked-out/api/orm": ["libs/api/orm/src/index.ts"]
+      "@decked-out/api/orm": ["libs/api/orm/src/index.ts"],
+      "@decked-out/api/auth": ["libs/api/auth/src/index.ts"],
+      "@decked-out/api/user": ["libs/api/user/src/index.ts"],
+      "@decked-out/api/config": ["libs/api/config/src/index.ts"],
+      "@decked-out/api/types": ["libs/api/types/src/index.ts"],
+      "@decked-out/api/testing": ["libs/api/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

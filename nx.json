@@ -28,7 +28,12 @@
     "app-components": { "tags": [] },
     "app-containers": { "tags": [] },
     "app-pages": { "tags": [] },
-    "app-graphql": { "tags": [] },
-    "api-orm": { "tags": [] }
+    "app-graphql": { "tags": [], "implicitDependencies": ["api"] },
+    "api-orm": { "tags": [] },
+    "api-auth": { "tags": [] },
+    "api-user": { "tags": [] },
+    "api-config": { "tags": [] },
+    "api-types": { "tags": [] },
+    "api-testing": { "tags": [] }
   }
 }
